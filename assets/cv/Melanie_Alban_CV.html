@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CV · Melanie Albán</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+<style>
+  :root{
+    --ink:#1c1a26;          /* texto principal */
+    --soft:#54506a;         /* texto secundario */
+    --mute:#8a8699;         /* texto terciario */
+    --accent:#6b4efc;       /* violeta */
+    --accent-d:#5436e0;
+    --side:#181527;         /* barra lateral */
+    --side-2:#221d38;
+    --line:#e7e5ef;
+    --line-side:rgba(255,255,255,.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#eceaf2}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;display:flex;justify-content:center;padding:24px}
+  .toolbar{position:fixed;top:14px;right:14px;display:flex;gap:10px;z-index:50}
+  .toolbar button{font-family:'Inter',sans-serif;font-size:13px;font-weight:600;border:none;background:var(--accent);color:#fff;padding:10px 16px;border-radius:9px;cursor:pointer;box-shadow:0 8px 22px -8px rgba(107,78,252,.7);transition:transform .15s,box-shadow .15s}
+  .toolbar button:hover{transform:translateY(-2px);box-shadow:0 12px 26px -8px rgba(107,78,252,.85)}
+
+  .page{width:210mm;min-height:297mm;background:#fff;display:grid;grid-template-columns:74mm 1fr;box-shadow:0 20px 60px -20px rgba(40,30,80,.35);overflow:hidden}
+
+  /* ---------- SIDEBAR ---------- */
+  .side{background:linear-gradient(165deg,var(--side-2),var(--side));color:#e9e7f3;padding:30px 24px}
+  .side__photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.22);display:block;margin:0 auto 14px;box-shadow:0 10px 26px -10px rgba(0,0,0,.6)}
+  .side__name{font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:700;text-align:center;letter-spacing:-.01em;line-height:1.12}
+  .side__role{text-align:center;font-size:12px;color:var(--accent);font-weight:600;margin-top:5px;letter-spacing:.02em}
+  .side__role b{color:#cdbcff}
+
+  .side h2{font-family:'Space Grotesk',sans-serif;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:#fff;margin:26px 0 12px;padding-bottom:7px;border-bottom:1px solid var(--line-side);display:flex;align-items:center;gap:8px}
+  .side h2 .ph{color:var(--accent);font-size:15px}
+
+  .contact-li{display:flex;align-items:flex-start;gap:10px;font-size:11.5px;color:#c9c6d8;margin-bottom:9px;line-height:1.4;word-break:break-word}
+  .contact-li .ph{color:var(--accent);font-size:14px;margin-top:1px;flex-shrink:0}
+  .contact-li a{color:#c9c6d8;text-decoration:none}
+
+  .skillcat{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#9b96b3;margin:12px 0 7px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#ddd9ec;background:rgba(255,255,255,.07);border:1px solid var(--line-side);padding:4px 9px;border-radius:7px}
+  .chip i{font-size:13px}
+
+  .lang{margin-bottom:11px}
+  .lang__top{display:flex;justify-content:space-between;font-size:11.5px;color:#d6d3e4;margin-bottom:5px}
+  .lang__bar{height:5px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden}
+  .lang__bar i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#a48bff);border-radius:4px}
+
+  .interest{display:flex;align-items:center;gap:9px;font-size:11.5px;color:#c9c6d8;margin-bottom:8px}
+  .interest .ph{color:var(--accent);font-size:14px}
+
+  /* ---------- MAIN ---------- */
+  .main{padding:32px 34px 30px}
+  .sec{margin-bottom:21px}
+  .sec:last-child{margin-bottom:0}
+  .sec__title{font-family:'Space Grotesk',sans-serif;font-size:14.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);display:flex;align-items:center;gap:10px;margin-bottom:13px}
+  .sec__title .ic{width:24px;height:24px;border-radius:7px;background:rgba(107,78,252,.12);box-shadow:inset 0 0 0 1px rgba(107,78,252,.25);display:inline-flex;align-items:center;justify-content:center;color:var(--accent);font-size:14px;flex-shrink:0}
+
+  .profile{font-size:12.5px;line-height:1.6;color:var(--soft)}
+  .profile b{color:var(--ink);font-weight:600}
+
+  .item{position:relative;padding-left:18px;margin-bottom:15px}
+  .item:last-child{margin-bottom:0}
+  .item::before{content:"";position:absolute;left:0;top:5px;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .item::after{content:"";position:absolute;left:3.5px;top:14px;bottom:-13px;width:1px;background:var(--line)}
+  .item:last-child::after{display:none}
+  .item__top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .item__role{font-size:13px;font-weight:700;color:var(--ink)}
+  .item__date{font-size:10.5px;font-weight:600;color:var(--accent);background:rgba(107,78,252,.1);padding:2px 8px;border-radius:5px;white-space:nowrap}
+  .item__org{font-size:11.5px;font-weight:600;color:var(--soft);margin:2px 0 5px}
+  .item__desc{font-size:11.5px;line-height:1.5;color:var(--soft)}
+  .item__desc b{color:var(--ink);font-weight:600}
+  .item__tags{margin-top:6px;display:flex;flex-wrap:wrap;gap:5px}
+  .item__tags span{font-size:10px;color:var(--accent-d);background:rgba(107,78,252,.09);padding:2px 7px;border-radius:5px;font-weight:500}
+
+  .edu-row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line)}
+  .edu-row:last-child{border-bottom:none}
+  .edu-row strong{font-size:12px;color:var(--ink);font-weight:600}
+  .edu-row span{font-size:11px;color:var(--soft)}
+  .edu-row em{font-size:10.5px;color:var(--mute);font-style:normal;white-space:nowrap}
+
+  .proj-row{font-size:11.5px;color:var(--soft);line-height:1.5;padding:6px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px}
+  .proj-row:last-child{border-bottom:none}
+  .proj-row .ph{color:var(--accent);font-size:14px;margin-top:1px}
+  .proj-row b{color:var(--ink);font-weight:600}
+  .proj-row a{color:var(--accent-d);text-decoration:none;font-weight:500}
+
+  @media print{
+    body{padding:0;background:#fff}
+    .toolbar{display:none}
+    .page{box-shadow:none;width:210mm;min-height:297mm}
+  }
+  @page{size:A4;margin:0}
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button onclick="window.print()">⤓ Guardar como PDF</button>
+</div>
+
+<div class="page">
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="side">
+    <img src="../img/melanie.jpg" alt="Melanie Albán" class="side__photo" />
+    <div class="side__name">Melanie Albán</div>
+    <div class="side__role">Desarrolladora <b>Full Stack</b></div>
+
+    <h2><i class="ph ph-address-book"></i> Contacto</h2>
+    <div class="contact-li"><i class="ph ph-envelope-simple"></i><a href="mailto:melanie_albanch@hotmail.com">melanie_albanch@hotmail.com</a></div>
+    <div class="contact-li"><i class="ph ph-github-logo"></i><a href="https://github.com/melanieAlban">github.com/melanieAlban</a></div>
+    <div class="contact-li"><i class="ph ph-globe-hemisphere-west"></i><a href="https://melaniealban.github.io">melaniealban.github.io</a></div>
+    <div class="contact-li"><i class="ph ph-map-pin"></i>Baños de Agua Santa, Tungurahua — Ecuador</div>
+
+    <h2><i class="ph ph-code"></i> Habilidades</h2>
+    <div class="skillcat">Backend</div>
+    <div class="chips">
+      <span class="chip"><i class="devicon-java-plain colored"></i>Java</span>
+      <span class="chip"><i class="devicon-spring-plain colored"></i>Spring Boot</span>
+      <span class="chip"><i class="devicon-python-plain colored"></i>Python</span>
+    </div>
+    <div class="skillcat">Frontend</div>
+    <div class="chips">
+      <span class="chip"><i class="devicon-angularjs-plain colored"></i>Angular</span>
+      <span class="chip"><i class="devicon-vuejs-plain colored"></i>Vue</span>
+      <span class="chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span>
+      <span class="chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+      <span class="chip"><i class="devicon-html5-plain colored"></i>HTML5</span>
+      <span class="chip"><i class="devicon-css3-plain colored"></i>CSS3</span>
+    </div>
+    <div class="skillcat">Bases de datos</div>
+    <div class="chips">
+      <span class="chip"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+      <span class="chip"><i class="devicon-oracle-original colored"></i>Oracle</span>
+      <span class="chip"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</span>
+    </div>
+    <div class="skillcat">Herramientas</div>
+    <div class="chips">
+      <span class="chip"><i class="devicon-git-plain colored"></i>Git</span>
+      <span class="chip"><i class="devicon-github-original"></i>GitHub</span>
+      <span class="chip"><i class="devicon-docker-plain colored"></i>Docker</span>
+      <span class="chip">Swagger</span>
+    </div>
+
+    <h2><i class="ph ph-translate"></i> Idiomas</h2>
+    <div class="lang"><div class="lang__top"><span>Español</span><span>Nativo</span></div><div class="lang__bar"><i style="width:100%"></i></div></div>
+    <div class="lang"><div class="lang__top"><span>Inglés</span><span>B1 · Intermedio</span></div><div class="lang__bar"><i style="width:60%"></i></div></div>
+
+    <h2><i class="ph ph-heart"></i> Intereses</h2>
+    <div class="interest"><i class="ph ph-basketball"></i>Baloncesto</div>
+    <div class="interest"><i class="ph ph-airplane-tilt"></i>Viajar</div>
+    <div class="interest"><i class="ph ph-globe-hemisphere-west"></i>Conocer culturas</div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main">
+    <section class="sec">
+      <h2 class="sec__title"><span class="ic"><i class="ph ph-user"></i></span>Perfil profesional</h2>
+      <p class="profile">
+        Estudiante de <b>Ingeniería en Software</b> y desarrolladora <b>Full Stack</b> en formación.
+        Construyo aplicaciones de extremo a extremo: <b>APIs REST</b> con Java y Spring Boot —contenerizadas
+        con Docker y documentadas con Swagger— e interfaces web en <b>Angular</b> y <b>Vue</b>. Diseño bases
+        de datos relacionales y trabajo a diario con Git y GitHub. Busco especializarme en <b>desarrollo de
+        software</b>, <b>ciberseguridad</b> y <b>análisis de datos</b>.
+      </p>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec__title"><span class="ic"><i class="ph ph-briefcase"></i></span>Experiencia</h2>
+      <div class="item">
+        <div class="item__top">
+          <span class="item__role">Desarrolladora Full Stack · Pasante</span>
+          <span class="item__date">Feb – Jul 2026</span>
+        </div>
+        <div class="item__org">Empresa Eléctrica Ambato Regional Centro Norte S.A. (EEASA)</div>
+        <p class="item__desc">
+          Desarrollo de un <b>sistema de reportería</b> para la gestión interna: modelado de consultas sobre
+          la base de datos corporativa, generación de reportes dinámicos y parametrizables, y construcción de
+          interfaces para consultar, filtrar y exportar la información clave para la toma de decisiones.
+        </p>
+        <div class="item__tags"><span>Java</span><span>Spring Boot</span><span>Angular</span><span>Oracle</span></div>
+      </div>
+      <div class="item">
+        <div class="item__top">
+          <span class="item__role">Desarrolladora Full Stack</span>
+          <span class="item__date">2023 – 2025</span>
+        </div>
+        <div class="item__org">Proyectos académicos y por encargo · UTA</div>
+        <p class="item__desc">
+          Aplicaciones de extremo a extremo: una <b>API REST de seguros</b> con Spring Boot (Docker + Swagger),
+          un frontend de <b>gestión financiera</b> en Angular, y sistemas de gestión de tareas y de centros de
+          salud desarrollados en equipo, con diseño de base de datos, lógica de negocio e interfaces.
+        </p>
+        <div class="item__tags"><span>Spring Boot</span><span>Angular</span><span>Vue</span><span>MySQL</span><span>Docker</span><span>Git</span></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec__title"><span class="ic"><i class="ph ph-graduation-cap"></i></span>Educación</h2>
+      <div class="edu-row"><div><strong>Ingeniería en Software</strong><br><span>Universidad Técnica de Ambato</span></div><em>2022 – Actualidad</em></div>
+      <div class="edu-row"><div><strong>Bachillerato en Ciencias</strong><br><span>U.E. «Óscar Efrén Reyes»</span></div><em>2015 – 2021</em></div>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec__title"><span class="ic"><i class="ph ph-certificate"></i></span>Cursos</h2>
+      <div class="edu-row"><div><strong>Control de versiones con Git &amp; GitHub</strong><br><span>Universidad Técnica de Ambato</span></div><em>2024</em></div>
+      <div class="edu-row"><div><strong>Arduino Básico</strong><br><span>Universidad Técnica de Ambato</span></div><em>2022</em></div>
+    </section>
+
+    <section class="sec">
+      <h2 class="sec__title"><span class="ic"><i class="ph ph-folder-notch"></i></span>Proyectos destacados</h2>
+      <div class="proj-row"><i class="ph ph-folder-notch"></i><div><b>Hatun Bus · Reservas</b> — Frontend para reserva de boletos de bus (rutas, horarios, asientos). <a href="https://github.com/melanieAlban/hatunbus-front-web">github.com/melanieAlban/hatunbus-front-web</a></div></div>
+      <div class="proj-row"><i class="ph ph-folder-notch"></i><div><b>Reservas de Aulas</b> — Sistema de reserva de aulas para la universidad (en equipo). <a href="https://github.com/FreddyA12/reservas-aulas-front">github.com/FreddyA12/reservas-aulas-front</a></div></div>
+      <div class="proj-row"><i class="ph ph-folder-notch"></i><div><b>Facturación · Junta de Agua</b> — Proyecto de vinculación: facturación para una junta de agua potable. <a href="https://github.com/junta-agua-uta/ja-facturacion-front">github.com/junta-agua-uta/ja-facturacion-front</a></div></div>
+      <div class="proj-row"><i class="ph ph-folder-notch"></i><div><b>Gestión Financiera · Frontend</b> — Aplicación web en Angular 19 + TypeScript. <a href="https://github.com/melanieAlban/finance-management-front">github.com/melanieAlban/finance-management-front</a></div></div>
+    </section>
+  </main>
+</div>
+
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-accent="violet" data-bg="grid">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Portafolio de Melanie Albán — Full Stack Developer & estudiante de Ingeniería en Software." />
+<title>Melanie Albán · Full Stack Developer</title>
+
+<!-- Tipografías -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Logos de tecnologías -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+
+<!-- Estilos -->
+<link rel="stylesheet" href="assets/css/portfolio.css" />
+</head>
+<body>
+
+<!-- ============ FONDO DECORATIVO ============ -->
+<div class="bg-fx" aria-hidden="true">
+  <div class="bg-grid"></div>
+  <div class="glow glow--1"></div>
+  <div class="glow glow--2"></div>
+  <div class="bg-noise"></div>
+</div>
+
+<!-- ============ CURSOR PERSONALIZADO ============ -->
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- ============ HEADER / NAV ============ -->
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="#home" class="nav__logo">
+      <span class="nav__logo-mark">&lt;/&gt;</span>
+      <span class="nav__logo-text">melanie<span class="accent">.alban</span></span>
+    </a>
+
+    <ul class="nav__list" id="nav-list">
+      <li><a href="#home" class="nav__link is-active"><span class="nav__idx">01.</span> Inicio</a></li>
+      <li><a href="#about" class="nav__link"><span class="nav__idx">02.</span> Sobre mí</a></li>
+      <li><a href="#skills" class="nav__link"><span class="nav__idx">03.</span> Skills</a></li>
+      <li><a href="#experience" class="nav__link"><span class="nav__idx">04.</span> Experiencia</a></li>
+      <li><a href="#projects" class="nav__link"><span class="nav__idx">05.</span> Proyectos</a></li>
+      <li><a href="#contact" class="nav__link"><span class="nav__idx">06.</span> Contacto</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <a href="assets/cv/Melanie_Alban_CV.html" target="_blank" rel="noopener" class="nav__cv magnetic">
+        <i class="ph ph-file-text"></i> CV
+      </a>
+      <button class="icon-btn" id="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v2.2M12 18.8V21M3 12h2.2M18.8 12H21M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/></g></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.4 6.4 0 0 0 10.5 10.5z" fill="currentColor"/></svg>
+      </button>
+      <button class="nav__burger" id="nav-burger" aria-label="Menú"><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="home section" id="home">
+  <div class="home__grid">
+    <div class="home__text">
+      <p class="home__status reveal"><span class="dot-live"></span> Disponible para prácticas y proyectos</p>
+      <h1 class="home__title reveal">
+        <span class="home__hi">Hola, soy</span>
+        Melanie&nbsp;Albán
+      </h1>
+      <h2 class="home__role reveal">
+        <span class="prompt">&gt;</span> <span class="typed" id="typed-role"></span><span class="caret">_</span>
+      </h2>
+      <p class="home__desc reveal">
+        Estudiante de <strong>Ingeniería en Software</strong> en la Universidad Técnica de Ambato.
+        Construyo aplicaciones de extremo a extremo con Java, Spring Boot, Angular y Vue — con la mira
+        puesta en <strong>desarrollo</strong>, <strong>ciberseguridad</strong> y <strong>análisis de datos</strong>.
+      </p>
+      <div class="home__cta reveal">
+        <a href="#contact" class="btn btn--primary magnetic">
+          Contáctame <i class="ph ph-arrow-right"></i>
+        </a>
+        <a href="#projects" class="btn btn--ghost magnetic">Ver proyectos</a>
+      </div>
+      <div class="home__social reveal">
+        <a href="https://github.com/melanieAlban" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i class="ph ph-github-logo"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn" title="Próximamente">
+          <i class="ph ph-linkedin-logo"></i>
+        </a>
+        <a href="mailto:melanie_albanch@hotmail.com" class="social-link" aria-label="Email">
+          <i class="ph ph-envelope-simple"></i>
+        </a>
+        <span class="social-line"></span>
+        <span class="social-loc">Baños de Agua Santa, EC</span>
+      </div>
+    </div>
+
+    <div class="home__visual reveal">
+      <div class="avatar">
+        <div class="avatar__glow"></div>
+        <img src="assets/img/melanie.jpg" alt="Melanie Albán" class="avatar__img" />
+        <span class="avatar__chip chip--1"><i class="devicon-java-plain colored"></i></span>
+        <span class="avatar__chip chip--2"><i class="devicon-spring-plain colored"></i></span>
+        <span class="avatar__chip chip--3"><i class="devicon-angularjs-plain colored"></i></span>
+        <span class="avatar__chip chip--4"><i class="devicon-vuejs-plain colored"></i></span>
+      </div>
+
+      <div class="terminal" id="terminal">
+        <div class="terminal__bar">
+          <span class="tdot tdot--r"></span><span class="tdot tdot--y"></span><span class="tdot tdot--g"></span>
+          <span class="terminal__title">melanie@portfolio: ~</span>
+        </div>
+        <div class="terminal__body" id="terminal-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Bajar">
+    <span class="scroll-cue__mouse"></span>
+    <span class="scroll-cue__txt">scroll</span>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <header class="sec-head reveal">
+    <span class="sec-kicker"><span class="prompt">//</span> 02 — sobre mí</span>
+    <h2 class="sec-title">Quién está detrás del código</h2>
+  </header>
+
+  <div class="about__grid">
+    <div class="about__card reveal">
+      <p class="about__lead">
+        Soy desarrolladora <strong>Full Stack</strong> en formación, enfocada en construir
+        aplicaciones completas — del modelo de datos y la API hasta la interfaz que usa la gente.
+      </p>
+      <p class="about__body">
+        He trabajado tanto en el <strong>backend</strong> —APIs REST con Java y Spring Boot,
+        contenerizadas con Docker y documentadas con Swagger— como en el <strong>frontend</strong>,
+        desarrollando aplicaciones en Angular y Vue. Diseño bases de datos relacionales
+        (MySQL, Oracle, SQL Server) y trabajo a diario con <strong>Git y GitHub</strong> para versionar
+        y colaborar en equipo. Actualmente realizo una pasantía construyendo un sistema de reportería
+        para una empresa del sector eléctrico.
+      </p>
+
+      <div class="about__obj">
+        <span class="about__obj-label"><i class="ph ph-target"></i> Objetivo profesional</span>
+        <p>Especializarme en <strong>desarrollo de software</strong>, <strong>ciberseguridad</strong> y <strong>análisis de datos</strong>, aportando soluciones limpias, seguras y escalables.</p>
+      </div>
+    </div>
+
+    <aside class="about__side">
+      <div class="stat reveal"><span class="stat__num" data-count="8">0</span><span class="stat__lbl">proyectos construidos</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="15" data-suffix="+">0</span><span class="stat__lbl">tecnologías usadas</span></div>
+      <div class="stat reveal"><span class="stat__num" data-count="2022">0</span><span class="stat__lbl">desde · UTA Ambato</span></div>
+
+      <div class="edu reveal">
+        <span class="edu__label"><i class="ph ph-stack"></i> Lo que hago</span>
+        <div class="edu__item">
+          <strong>Backend</strong>
+          <span>APIs REST · Spring Boot · Docker · Swagger</span>
+        </div>
+        <div class="edu__item">
+          <strong>Frontend</strong>
+          <span>Angular · Vue · HTML / CSS / JS</span>
+        </div>
+        <div class="edu__item">
+          <strong>Datos &amp; DevOps</strong>
+          <span>MySQL · Oracle · SQL Server · Git</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section skills" id="skills">
+  <header class="sec-head reveal">
+    <span class="sec-kicker"><span class="prompt">//</span> 03 — stack técnico</span>
+    <h2 class="sec-title">Herramientas con las que trabajo</h2>
+  </header>
+
+  <div class="skills__groups" id="skills-groups">
+    <!-- los grupos se generan por JS desde el dataset -->
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE + FORMACIÓN ============ -->
+<section class="section experience" id="experience">
+  <header class="sec-head reveal">
+    <span class="sec-kicker"><span class="prompt">//</span> 04 — trayectoria</span>
+    <h2 class="sec-title">Experiencia &amp; formación</h2>
+  </header>
+
+  <div class="trayectoria">
+    <!-- ---- EXPERIENCIA (trabajo) ---- -->
+    <div class="tray-col reveal">
+      <h3 class="tray-col__head"><span class="prompt">//</span> experiencia</h3>
+      <div class="timeline">
+        <article class="tl-item">
+          <span class="tl-node"></span>
+          <div class="tl-card">
+            <div class="tl-top">
+              <h4 class="tl-role">Desarrolladora Full Stack · Pasante <span class="tl-badge tl-badge--live">Actual</span></h4>
+              <span class="tl-date"><i class="ph ph-calendar-blank"></i> Feb – Jul 2026</span>
+            </div>
+            <p class="tl-org">Empresa Eléctrica Ambato Regional Centro Norte S.A. (EEASA)</p>
+            <p class="tl-desc">
+              Desarrollo de un <strong>sistema de reportería</strong> para la gestión interna de la
+              empresa. Modelo consultas sobre la base de datos corporativa, genero reportes dinámicos
+              y parametrizables, y construyo las interfaces que permiten al personal consultar, filtrar
+              y exportar la información clave para la toma de decisiones.
+            </p>
+            <ul class="tag-row">
+              <li>Java</li><li>Spring Boot</li><li>Angular</li><li>Oracle</li><li>Reportería</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item">
+          <span class="tl-node"></span>
+          <div class="tl-card">
+            <div class="tl-top">
+              <h4 class="tl-role">Desarrolladora Full Stack</h4>
+              <span class="tl-date"><i class="ph ph-calendar-blank"></i> 2023 – 2025</span>
+            </div>
+            <p class="tl-org">Proyectos académicos y por encargo · UTA</p>
+            <p class="tl-desc">
+              Construcción de aplicaciones de extremo a extremo: una <strong>API REST de seguros</strong>
+              con Spring Boot (contenerizada con Docker y documentada con Swagger), un frontend de
+              <strong>gestión financiera</strong> en Angular, y sistemas de gestión de tareas y de
+              centros de salud desarrollados en equipo. Diseño de base de datos, lógica de negocio e interfaces.
+            </p>
+            <ul class="tag-row">
+              <li>Spring Boot</li><li>Angular</li><li>Vue</li><li>MySQL</li><li>Docker</li><li>Git</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- ---- FORMACIÓN (educación + cursos) ---- -->
+    <div class="tray-col reveal">
+      <h3 class="tray-col__head"><span class="prompt">//</span> formación</h3>
+
+      <div class="form-block">
+        <span class="form-block__lbl"><i class="ph ph-graduation-cap"></i> Educación</span>
+        <div class="form-item">
+          <span class="form-item__dot"></span>
+          <div>
+            <strong>Ingeniería en Software</strong>
+            <span>Universidad Técnica de Ambato</span>
+            <em>2022 – Actualidad</em>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="form-item__dot"></span>
+          <div>
+            <strong>Bachillerato en Ciencias</strong>
+            <span>U.E. «Óscar Efrén Reyes»</span>
+            <em>2015 – 2021</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-block">
+        <span class="form-block__lbl"><i class="ph ph-certificate"></i> Cursos &amp; formación complementaria</span>
+        <div class="form-item">
+          <span class="form-item__dot"></span>
+          <div>
+            <strong>Control de versiones con Git &amp; GitHub</strong>
+            <span>Universidad Técnica de Ambato</span>
+            <em>2024</em>
+          </div>
+        </div>
+        <div class="form-item">
+          <span class="form-item__dot"></span>
+          <div>
+            <strong>Arduino Básico</strong>
+            <span>Universidad Técnica de Ambato</span>
+            <em>2022</em>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="section projects" id="projects">
+  <header class="sec-head reveal">
+    <span class="sec-kicker"><span class="prompt">//</span> 05 — portafolio</span>
+    <h2 class="sec-title">Proyectos destacados</h2>
+  </header>
+
+  <div class="proj-grid" id="proj-grid">
+    <!-- las tarjetas se generan por JS desde el dataset -->
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section contact" id="contact">
+  <header class="sec-head reveal">
+    <span class="sec-kicker"><span class="prompt">//</span> 06 — hablemos</span>
+    <h2 class="sec-title">Construyamos algo juntos</h2>
+  </header>
+
+  <div class="contact__grid">
+    <div class="contact__info reveal">
+      <p class="contact__lead">¿Tienes una idea, una vacante o un proyecto en mente? Escríbeme y te respondo pronto.</p>
+
+      <a href="mailto:melanie_albanch@hotmail.com" class="info-card magnetic">
+        <span class="info-card__ic"><i class="ph ph-envelope-simple"></i></span>
+        <span><strong>Email</strong>melanie_albanch@hotmail.com</span>
+      </a>
+      <a href="https://github.com/melanieAlban" target="_blank" rel="noopener" class="info-card magnetic">
+        <span class="info-card__ic"><i class="ph ph-github-logo"></i></span>
+        <span><strong>GitHub</strong>github.com/melanieAlban</span>
+      </a>
+      <a href="#" class="info-card magnetic">
+        <span class="info-card__ic"><i class="ph ph-linkedin-logo"></i></span>
+        <span><strong>LinkedIn</strong>Próximamente</span>
+      </a>
+      <div class="info-card info-card--static">
+        <span class="info-card__ic"><i class="ph ph-map-pin"></i></span>
+        <span><strong>Ubicación</strong>Baños de Agua Santa · Tungurahua · Ecuador</span>
+      </div>
+    </div>
+
+    <form class="contact__form reveal" id="contact-form" novalidate>
+      <div class="form-bar">
+        <span class="tdot tdot--r"></span><span class="tdot tdot--y"></span><span class="tdot tdot--g"></span>
+        <span class="form-bar__title">mensaje.sh</span>
+      </div>
+      <div class="form-body">
+        <div class="field">
+          <label for="name"><span class="prompt">const</span> nombre =</label>
+          <input type="text" id="name" name="name" placeholder="'Tu nombre'" required />
+        </div>
+        <div class="field">
+          <label for="email"><span class="prompt">const</span> email =</label>
+          <input type="email" id="email" name="email" placeholder="'tu@correo.com'" required />
+        </div>
+        <div class="field">
+          <label for="msg"><span class="prompt">const</span> mensaje =</label>
+          <textarea id="msg" name="message" rows="4" placeholder="'Cuéntame sobre tu proyecto…'" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full magnetic">
+          <span class="btn-label">Enviar mensaje</span> <i class="ph ph-paper-plane-tilt"></i>
+        </button>
+        <p class="form-note" id="form-note" hidden></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ EXTRAS / HOBBIES ============ -->
+<section class="section extras" id="extras">
+  <header class="sec-head reveal">
+    <span class="sec-kicker"><span class="prompt">//</span> bonus — fuera del teclado</span>
+    <h2 class="sec-title">También me gusta…</h2>
+  </header>
+  <div class="hobby-row">
+    <div class="hobby reveal">
+      <span class="hobby__ic"><i class="ph ph-basketball"></i></span>
+      <strong>Baloncesto</strong>
+      <span>Trabajo en equipo y disciplina, dentro y fuera de la cancha.</span>
+    </div>
+    <div class="hobby reveal">
+      <span class="hobby__ic"><i class="ph ph-airplane-tilt"></i></span>
+      <strong>Viajar</strong>
+      <span>Cada destino es una nueva perspectiva para resolver problemas.</span>
+    </div>
+    <div class="hobby reveal">
+      <span class="hobby__ic"><i class="ph ph-globe-hemisphere-west"></i></span>
+      <strong>Conocer culturas</strong>
+      <span>Curiosidad por la gente, su historia y su forma de ver el mundo.</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="nav__logo-mark">&lt;/&gt;</span>
+      <div>
+        <strong>Melanie Albán</strong>
+        <span>Full Stack Developer · UTA Ambato</span>
+      </div>
+    </div>
+    <nav class="footer__nav">
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+    <div class="footer__social">
+      <a href="https://github.com/melanieAlban" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+      <a href="mailto:melanie_albanch@hotmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+    </div>
+  </div>
+  <p class="footer__copy">© 2026 Melanie Albán · Hecho con <span class="accent">&lt;código/&gt;</span> y café.</p>
+</footer>
+
+<a href="#home" class="to-top" id="to-top" aria-label="Subir"><i class="ph ph-arrow-up"></i></a>
+
+<!-- Iconos Phosphor -->
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<!-- Lógica -->
+<script src="assets/js/portfolio.js"></script>
+</body>
+</html>
